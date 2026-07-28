@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ウォーターメロン・インベストメンツ合同会社 — Watermelon Investments Limited Liability Co.</title>
+<meta name="description" content="ウォーターメロン・インベストメンツ合同会社の公式サイト。不動産投資シミュレーションゲーム「戦略的！不動産王への道」を開発・提供しています。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>🏢</text></svg>">
+<style>
+  /* ── 配色はアプリと同じ。深緑の地に銅色のアクセント ── */
+  :root {
+    --paper: #E9ECE7;
+    --ink:   #16211D;
+    --ink-2: #3D4C46;
+    --ink-3: #6E8078;
+    --rule:  #C7D0CA;
+    --green: #163D30;
+    --copper:#B4682C;
+    --card:  #FFFFFF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0C1113;
+      --ink:   #E4EAE6;
+      --ink-2: #B2C0BA;
+      --ink-3: #7E908A;
+      --rule:  #26332F;
+      --green: #8FCBB0;
+      --copper:#D68A4A;
+      --card:  #121A1C;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif;
+    line-height: 1.85; font-size: 15.5px;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 720px; margin-inline: auto; padding: 0 22px; }
+
+  /* ── ヘッダ ── */
+  .mast { border-bottom: 1px solid var(--rule); }
+  .mast .wrap { display: flex; align-items: center; gap: 12px; padding-block: 18px; }
+  .logo { flex: none; }
+  .co { font-size: 13px; line-height: 1.45; }
+  .co b { display: block; font-weight: 700; letter-spacing: .01em; }
+  .co span { color: var(--ink-3); font-size: 11.5px; letter-spacing: .04em; }
+
+  /* ── 見出し ── */
+  h1 {
+    font-family: Georgia, "Times New Roman", "Hiragino Mincho ProN", serif;
+    font-size: clamp(27px, 6vw, 38px); line-height: 1.32; font-weight: 700;
+    margin: 46px 0 10px; text-wrap: balance;
+  }
+  h2 {
+    font-size: 17px; font-weight: 700; margin: 52px 0 14px;
+    padding-top: 22px; border-top: 1px solid var(--rule);
+  }
+  h3 { font-size: 14.5px; font-weight: 700; margin: 26px 0 6px; }
+  .label {
+    font-family: ui-monospace, Consolas, monospace; font-size: 10.5px;
+    letter-spacing: .16em; text-transform: uppercase; color: var(--copper);
+    margin-bottom: 4px;
+  }
+  .lede { font-size: 16.5px; color: var(--ink-2); margin: 0 0 8px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--copper); text-underline-offset: 3px; }
+
+  /* ── アプリ紹介 ── */
+  .app {
+    background: var(--card); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 24px; margin: 26px 0; display: flex; gap: 20px; align-items: flex-start;
+  }
+  .app .mark { flex: none; border-radius: 15px; overflow: hidden; line-height: 0; }
+  .app h3 { margin-top: 0; font-size: 16px; }
+  .app .sub { color: var(--copper); font-size: 12.5px; letter-spacing: .04em; margin-bottom: 8px; }
+  .app p { font-size: 14px; color: var(--ink-2); margin-bottom: 0; }
+  @media (max-width: 520px) { .app { flex-direction: column; gap: 14px; } }
+
+  ul { margin: 0 0 14px; padding-left: 1.15em; }
+  li { margin-bottom: 5px; }
+
+  /* ── 会社概要 ── */
+  dl { margin: 0; display: grid; grid-template-columns: 8.5em 1fr; gap: 0; }
+  dt {
+    font-size: 12.5px; color: var(--ink-3); padding: 11px 0;
+    border-top: 1px solid var(--rule);
+  }
+  dd {
+    margin: 0; padding: 11px 0; border-top: 1px solid var(--rule); font-size: 14.5px;
+    overflow-wrap: anywhere;
+  }
+  @media (max-width: 520px) {
+    dl { grid-template-columns: 1fr; }
+    dt { padding-bottom: 0; border-top: 1px solid var(--rule); }
+    dd { padding-top: 2px; border-top: 0; }
+  }
+
+  .note {
+    font-size: 13px; color: var(--ink-3); background: var(--card);
+    border: 1px solid var(--rule); border-left: 3px solid var(--copper);
+    border-radius: 0 8px 8px 0; padding: 14px 16px; margin: 22px 0;
+  }
+  .note p:last-child { margin-bottom: 0; }
+
+  footer {
+    margin-top: 64px; border-top: 1px solid var(--rule);
+    padding: 26px 0 46px; font-size: 12.5px; color: var(--ink-3);
+  }
+  footer b { color: var(--ink-2); }
+
+  .en { margin-top: 8px; }
+  .en h1 { margin-top: 34px; }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <svg class="logo" width="38" height="38" viewBox="0 0 1024 1024" role="img" aria-label="ロゴ">
+      <rect width="1024" height="1024" rx="150" fill="#163D30"/>
+      <g fill="#FFFFFF" opacity=".22">
+        <rect x="196" y="620" width="164" height="204"/>
+        <rect x="430" y="500" width="164" height="324"/>
+        <rect x="664" y="380" width="164" height="444"/>
+      </g>
+      <path d="M196 700 L430 560 L620 622 L858 286" fill="none" stroke="#D68A4A"
+            stroke-width="70" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="858" cy="286" r="62" fill="#D68A4A"/>
+    </svg>
+    <div class="co">
+      <b>ウォーターメロン・インベストメンツ合同会社</b>
+      <span>WATERMELON INVESTMENTS LIMITED LIABILITY CO.</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="label">会社案内</div>
+  <h1>不動産投資を、<br>遊びながら理解できる形に。</h1>
+  <p class="lede">
+    ウォーターメロン・インベストメンツ合同会社は、不動産投資の意思決定プロセスを
+    学べるソフトウェアを開発しています。
+  </p>
+  <p>
+    不動産投資の難しさは、判断材料が多いことよりも、
+    <strong>その判断が正しかったかどうかが数年後にしか分からない</strong>ことにあります。
+    実務では一度しか試せない意思決定を、繰り返し試せる形にすること。
+    それが私たちのつくるものの目的です。
+  </p>
+
+  <h2>提供しているアプリ</h2>
+
+  <div class="app">
+    <div class="mark">
+      <svg width="84" height="84" viewBox="0 0 1024 1024" role="img" aria-label="アプリアイコン">
+        <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#163D30"/><stop offset="1" stop-color="#0C241E"/>
+        </linearGradient></defs>
+        <rect width="1024" height="1024" fill="url(#g)"/>
+        <g fill="#FFFFFF" opacity=".22">
+          <rect x="196" y="620" width="164" height="204"/>
+          <rect x="430" y="500" width="164" height="324"/>
+          <rect x="664" y="380" width="164" height="444"/>
+        </g>
+        <path d="M150 824 H874" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="6"/>
+        <path d="M196 700 L430 560 L620 622 L858 286" fill="none" stroke="#D68A4A"
+              stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="858" cy="286" r="46" fill="#D68A4A" stroke="#163D30" stroke-width="16"/>
+      </svg>
+    </div>
+    <div>
+      <h3>戦略的！不動産王への道</h3>
+      <div class="sub">指標で判断する不動産投資 ／ Strategic Rise of a Real Estate Mogul</div>
+      <p>
+        銀行から融資を引き、物件を買い、育てて売る。IRR・CCR・DSCR といった実務の指標を
+        見ながら、AI 2人の投資家と同じ市場で競い合う不動産投資シミュレーションゲームです。
+        キャッシュフロー計算書・損益計算書・貸借対照表が常に整合します。
+      </p>
+    </div>
+  </div>
+
+  <h3>特徴</h3>
+  <ul>
+    <li>米国 CCIM／CPM の分析フレームワークに基づくキャッシュフローモデル</li>
+    <li>融資条件・減価償却・税金・修繕・空室まで織り込んだ月次シミュレーション</li>
+    <li>19章の解説と用語集を内蔵。初めての方でも仕組みから理解できます</li>
+    <li>日本語／英語対応。通信は行わず、オフラインで完結します</li>
+  </ul>
+
+  <div class="note">
+    <p>
+      <strong>本アプリは教育目的のシミュレーションゲームです。</strong>
+      投資助言・勧誘を行うものではなく、実在する物件・企業・金融機関を再現したものでもありません。
+      ゲーム内の数値は学習のために簡略化されたモデルであり、実際の取引条件を保証するものではありません。
+    </p>
+  </div>
+
+  <h2>会社概要</h2>
+  <dl>
+    <dt>商号</dt>
+    <dd>ウォーターメロン・インベストメンツ合同会社<br>
+        Watermelon Investments Limited Liability Co.</dd>
+    <dt>事業内容</dt>
+    <dd>ソフトウェアの企画・開発・提供</dd>
+    <dt>D-U-N-S 番号</dt>
+    <dd>692970840</dd>
+    <dt>お問い合わせ</dt>
+    <dd><a href="mailto:watermelon.investments@gmail.com">watermelon.investments@gmail.com</a></dd>
+  </dl>
+
+  <h2>プライバシーポリシー</h2>
+  <p>
+    当社のアプリは利用者の個人情報を一切収集しません。詳細は
+    <a href="privacy-policy.html">プライバシーポリシー</a>をご覧ください。
+  </p>
+
+  <!-- ══ English ══ -->
+  <div class="en">
+    <h2>English</h2>
+
+    <h1>Understanding real estate investment, by playing it.</h1>
+    <p class="lede">
+      Watermelon Investments Limited Liability Co. builds software that teaches the
+      decision-making process behind real estate investment.
+    </p>
+    <p>
+      What makes real estate hard is not the number of variables. It is that
+      <strong>you only learn whether a decision was right several years later.</strong>
+      We turn decisions you can only make once into decisions you can practise.
+    </p>
+
+    <h3>Strategic Rise of a Real Estate Mogul</h3>
+    <p>
+      Borrow from the bank, buy a building, improve it, and sell it. A real estate
+      investment simulation where you compete against two AI investors in the same
+      market, judging every deal by IRR, CCR, and DSCR. Cash flow statement, income
+      statement, and balance sheet stay reconciled at all times. Japanese and English.
+      Works fully offline — the app performs no network communication.
+    </p>
+
+    <div class="note">
+      <p>
+        <strong>This app is an educational simulation game.</strong>
+        It does not provide investment advice or solicitation, and does not depict real
+        properties, companies, or financial institutions. Figures in the game are
+        simplified for learning and do not represent actual market terms.
+      </p>
+    </div>
+
+    <h3>Company</h3>
+    <dl>
+      <dt>Legal name</dt>
+      <dd>Watermelon Investments Limited Liability Co.</dd>
+      <dt>Business</dt>
+      <dd>Software design, development, and publishing</dd>
+      <dt>D-U-N-S</dt>
+      <dd>692970840</dd>
+      <dt>Contact</dt>
+      <dd><a href="mailto:watermelon.investments@gmail.com">watermelon.investments@gmail.com</a></dd>
+    </dl>
+    <p>See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+  </div>
+
+</main>
+
+<footer class="wrap">
+  <b>ウォーターメロン・インベストメンツ合同会社</b><br>
+  Watermelon Investments Limited Liability Co.<br>
+  watermelon.investments@gmail.com
+</footer>
+
+</body>
+</html>
