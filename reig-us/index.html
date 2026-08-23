@@ -44,6 +44,10 @@ img{max-width:100%}
 .lead{font-size:clamp(16.5px,1.9vw,20px);line-height:1.7;color:#edf6ff;margin:0 0 18px}
 /* 略語の壁で初心者が離れるので、リードの直後に必ず解毒剤を置く */
 .antidote{font-size:14px;line-height:1.85;color:#cfe1f6;background:rgba(255,255,255,.07);border-left:3px solid #46a4ff;border-radius:0 12px 12px 0;padding:14px 16px;margin:0 0 22px}
+/* 短い文が行末に数文字だけ取り残されるのを防ぐ。
+   pretty は最終行の孤立を必ずしも防がないので、短い塊は balance を使う */
+.byline,.cta-lead,.shotnote,.fitnote,.premise>p,.feature-note{text-wrap:balance}
+.lead,.antidote,.intro,.card p,.shot p,.step p,.fitbox li span,.faqlist .a,.signature p{text-wrap:pretty}
 .byline{display:block;padding:13px 15px;border-radius:14px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);margin:0 0 24px;font-size:13.5px;line-height:1.7;color:#e4f0ff}
 .byline b{color:#fff}
 .cta-lead{font-size:14px;font-weight:800;color:#d9eaff;margin:0 0 11px}

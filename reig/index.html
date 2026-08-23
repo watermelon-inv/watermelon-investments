@@ -44,6 +44,10 @@ img{max-width:100%}
 .lead{font-size:clamp(16.5px,1.9vw,20px);line-height:1.7;color:#edf6ff;margin:0 0 18px}
 /* 略語の壁で初心者が離れるので、リードの直後に必ず解毒剤を置く */
 .antidote{font-size:14px;line-height:1.85;color:#cfe1f6;background:rgba(255,255,255,.07);border-left:3px solid #46a4ff;border-radius:0 12px 12px 0;padding:14px 16px;margin:0 0 22px}
+/* 短い文が行末に数文字だけ取り残されるのを防ぐ。
+   pretty は最終行の孤立を必ずしも防がないので、短い塊は balance を使う */
+.byline,.cta-lead,.shotnote,.fitnote,.premise>p,.feature-note{text-wrap:balance}
+.lead,.antidote,.intro,.card p,.shot p,.step p,.fitbox li span,.faqlist .a,.signature p{text-wrap:pretty}
 .byline{display:block;padding:13px 15px;border-radius:14px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);margin:0 0 24px;font-size:13.5px;line-height:1.7;color:#e4f0ff}
 .byline b{color:#fff}
 .cta-lead{font-size:14px;font-weight:800;color:#d9eaff;margin:0 0 11px}
@@ -357,7 +361,7 @@ footer{padding:34px 0 116px;border-top:1px solid var(--line);font-size:12px;colo
       <h1>数千万円を動かす前に、<br class="br-wide">ゲームの中で、<br class="br-wide">何棟か間違えておく。</h1>
       <p class="lead">物件を選び、5つの銀行から融資を組み、保有して、売る。不動産投資の判断基準を、遊びながら身につけるシミュレーションゲームです。</p>
       <p class="antidote">指標の名前を知らなくても始められます。19章の解説と用語集が入っていて、画面の「？」からその場で開けます。</p>
-      <div class="byline"><b>USCPA と、CCIM・CPM の2つの米国不動産資格を持つ、10年超の現役大家</b>が設計しました。</div>
+      <div class="byline"><b>USCPA と、CCIM・CPM の2つの米国不動産資格を持つ、不動産投資歴10年超の現役大家</b>が設計しました。</div>
       <p class="cta-lead">iPhone / Android、どちらでも中身は同じです。</p>
       <div class="cta-row">
         <a class="btn apple" href="https://apps.apple.com/jp/app/%E6%88%A6%E7%95%A5%E7%9A%84%E5%A4%A7%E5%AE%B6%E3%81%B8%E3%81%AE%E9%81%93-%E6%97%A5%E6%9C%AC%E7%B7%A8/id6798298485" target="_blank" rel="noopener">App Store</a><a class="btn play" href="https://play.google.com/store/apps/details?id=jp.watermeloninvestments.reig&referrer=utm_source%3Dwatermelon-investments.com%26utm_medium%3Dlp%26utm_campaign%3Dreig_jp_lp" target="_blank" rel="noopener">Google Play</a>
