@@ -15,6 +15,7 @@
    ------------------------------------------------------------------ */
 
 :root{
+  --hdr:76px;
   --white:#FFFFFF;
   --paper:#F7FAFC;
   --navy:#071A36;
@@ -32,12 +33,11 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;overflow-x:hidden;color-scheme:light}
+html{-webkit-text-size-adjust:100%;color-scheme:light}
 p,dd,li{text-wrap:pretty}
 .note,.sec-head h2,.hero h1{text-wrap:balance}
 body{
   margin:0;
-  overflow-x:hidden;
   background:var(--paper);
   color:var(--ink);
   font-family:var(--font);
@@ -84,7 +84,18 @@ section{padding:clamp(56px,8vw,96px) 0}
 .bg-navy{background:var(--navy);color:var(--ink-on-dark)}
 
 /* ---------- 1. ヘッダー：完全な白。ロゴが置ける唯一の場所 ---------- */
-.site-header{background:var(--white);border-bottom:1px solid var(--rule)}
+/* スクロールしても残す。ナビがアンカーなので、消えると機能しない */
+.site-header{
+  background:var(--white);
+  border-bottom:1px solid var(--rule);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+/* 固定ヘッダーの下に見出しが潜らないよう、飛び先に余白を持たせる。
+   --hdr はヘッダーの実高。幅で変わるのでメディアクエリ側でも上書きする */
+[id]{scroll-margin-top:calc(var(--hdr) + 14px)}
+html{scroll-behavior:smooth}
 .header-row{
   height:76px;
   display:flex;
@@ -106,6 +117,7 @@ section{padding:clamp(56px,8vw,96px) 0}
 .nav-mobile{display:none}
 
 @media (max-width:639px){
+  :root{--hdr:103px}
   .header-row{height:64px}
   .header-row .nav{display:none}
   .nav-mobile{
